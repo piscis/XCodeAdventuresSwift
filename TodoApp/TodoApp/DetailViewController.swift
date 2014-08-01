@@ -10,8 +10,8 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet strong var titleTextfield: UITextField = UITextField()
-    @IBOutlet strong var notesTextView: UITextView = UITextView()
+    @IBOutlet strong var titleTextfield: UITextField? = UITextField()
+    @IBOutlet strong var notesTextView: UITextView? = UITextView()
     
     
     var toDoData:NSDictionary = NSDictionary()
@@ -20,11 +20,11 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        titleTextfield.userInteractionEnabled = false
-        notesTextView.userInteractionEnabled = false
+        titleTextfield!.userInteractionEnabled = false
+        notesTextView!.userInteractionEnabled = false
         
-        titleTextfield.text = toDoData.objectForKey("itemTitle") as String
-        notesTextView.text = toDoData.objectForKey("itemNote") as String
+        titleTextfield!.text = toDoData.objectForKey("itemTitle") as String
+        notesTextView!.text = toDoData.objectForKey("itemNote") as String
     }
 
     override func didReceiveMemoryWarning() {

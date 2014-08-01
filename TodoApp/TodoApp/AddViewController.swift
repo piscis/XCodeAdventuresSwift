@@ -10,9 +10,9 @@ import UIKit
 
 class AddViewController: UIViewController {
 
-    @IBOutlet strong var titleTextField: UITextField = UITextField()
+    @IBOutlet strong var titleTextField: UITextField! = UITextField()
     
-    @IBOutlet strong var notesTextView: UITextView = UITextView()
+    @IBOutlet strong var notesTextView: UITextView! = UITextView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
